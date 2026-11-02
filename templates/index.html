@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d5638">
+  <meta name="description" content="Proyecto de Ingeniería Económica, Grupo 13. Ocho ejercicios resueltos con calculadoras de matemática financiera.">
+  <title>Ingeniería Económica | Grupo 13 · UAE</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <div class="marca">
+        <span class="marca-eyebrow">UAE · GRUPO 13</span>
+        <strong>Ingeniería Económica</strong>
+        <span>Proyecto académico</span>
+      </div>
+      <p class="menu-label">CONTENIDOS</p>
+      <nav class="menu">
+        <a class="menu-item inicio-link" href="#inicio">Inicio</a>
+        <details class="nav-grupo" open>
+          <summary>Interés simple <small>3</small></summary>
+          <div class="submenu">
+            <a href="#concepto">Concepto y fórmulas</a>
+            <a href="#ejercicio-1">Ejercicio 1 · Tasa anual</a>
+            <a href="#ejercicio-2">Ejercicio 2 · Tiempo</a>
+            <a href="#ejercicio-3">Ejercicio 3 · Capital</a>
+          </div>
+        </details>
+        <div class="menu-pendiente">Diagrama de tiempo <small>Próximamente</small></div>
+        <details class="nav-grupo">
+          <summary>Descuento simple <small>1</small></summary>
+          <div class="submenu"><a href="#descuento-simple">Concepto</a><a href="#ejercicio-7">Ejercicio 7 · Descuento</a></div>
+        </details>
+        <details class="nav-grupo">
+          <summary>Tasa equivalente <small>1</small></summary>
+          <div class="submenu"><a href="#tasa-equivalente">Concepto</a><a href="#ejercicio-8">Ejercicio 8 · Tasa real</a></div>
+        </details>
+        <div class="menu-pendiente">Interés compuesto <small>Próximamente</small></div>
+        <details class="nav-grupo">
+          <summary>Fecha focal <small>3</small></summary>
+          <div class="submenu">
+            <a href="#fecha-focal">Concepto</a>
+            <a href="#ejercicio-4">Ejercicio 4 · Tres pagos</a>
+            <a href="#ejercicio-5">Ejercicio 5 · Depósitos</a>
+            <a href="#ejercicio-6">Ejercicio 6 · Deudas</a>
+          </div>
+        </details>
+        <div class="menu-pendiente">Anualidades <small>Próximamente</small></div>
+        <div class="menu-pendiente">Amortización <small>Próximamente</small></div>
+        <div class="menu-pendiente">Evaluación de proyectos <small>Próximamente</small></div>
+        <div class="menu-pendiente">TIR <small>Próximamente</small></div>
+      </nav>
+      <p class="sidebar-pie">Universidad Agraria del Ecuador</p>
+    </aside>
+
+    <main id="inicio" class="contenido">
+      <header class="hero">
+        <div class="hero-texto">
+          <span class="etiqueta">UNIVERSIDAD AGRARIA DEL ECUADOR</span>
+          <h1>Proyecto de Ingeniería Económica</h1>
+          <p>Conceptos, procedimientos y ejercicios interactivos.</p>
+          <span class="grupo-badge">Grupo 13</span>
+        </div>
+        <div class="hero-imagen"><img src="/static/img/agraria-banner.png" alt="Imagen institucional de la Universidad Agraria del Ecuador"></div>
+      </header>
+
+      <section class="tarjeta equipo" aria-labelledby="equipo-titulo">
+        <div class="encabezado-seccion">
+          <span class="etiqueta">EQUIPO DE TRABAJO</span>
+          <h2 id="equipo-titulo">Integrantes del Grupo 13</h2>
+        </div>
+        <ul class="lista-integrantes">
+          <li>Castro Serrano Kevin Daniel</li>
+          <li>Guzman Angel Eduardo Xavier</li>
+          <li>Marín Torres Misael Gustavo</li>
+          <li>Morán Landázuri James Rolando</li>
+          <li>Vera Carbo Kevin David</li>
+        </ul>
+      </section>
+
+      <section class="tarjeta resumen" aria-labelledby="resumen-titulo">
+        <div class="resumen-textos">
+          <span class="etiqueta">TALLER 3 · 8 EJERCICIOS</span>
+          <h2 id="resumen-titulo">Aprende con los ejercicios del grupo</h2>
+          <p>Cada problema conserva su planteamiento y su incógnita. Cambia únicamente los valores de entrada, selecciona <strong>Calcular</strong> y consulta el procedimiento completo.</p>
+          <a href="/static/archivos/Taller_3_Grupo13.xlsx" class="enlace-archivo" download>Descargar el Excel original <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="resumen-datos"><strong>8</strong><span>calculadoras</span><strong>4</strong><span>temas con ejercicios</span></div>
+      </section>
+
+      <section id="concepto" class="tarjeta tema-seccion">
+        <div class="encabezado-seccion"><span class="etiqueta">UNIDAD 1</span><h2>Interés simple</h2><p>El interés simple se calcula únicamente sobre el capital inicial. Los intereses obtenidos no generan nuevos intereses.</p></div>
+        <div class="formulas">
+          <div class="formula"><span>Interés generado</span><strong>I = C × i × n</strong></div>
+          <div class="formula"><span>Monto final</span><strong>M = C × (1 + i × n)</strong></div>
+          <div class="formula"><span>Tasa de interés</span><strong>i = I / (C × n)</strong></div>
+          <div class="formula"><span>Valor presente</span><strong>C = M / (1 + i × n)</strong></div>
+        </div>
+        <p class="detalle-teorico"><strong>Variables:</strong> C = capital inicial; I = interés; i = tasa en forma decimal; n = tiempo; M = monto futuro. La tasa y el tiempo deben expresarse en el mismo período.</p>
+        <div id="lista-interes" class="lista-ejercicios"></div>
+      </section>
+
+      <section id="fecha-focal" class="tarjeta tema-seccion">
+        <div class="encabezado-seccion"><span class="etiqueta">ECUACIONES DE VALOR</span><h2>Fecha focal</h2><p>Permite valorar en una misma fecha cantidades de dinero recibidas o pagadas en momentos diferentes. Los problemas del taller utilizan interés simple.</p></div>
+        <p class="aviso">Los ejercicios 4 y 5 conservan los plazos en días que figuran en Excel; utilizan el año comercial de 360 días. Puedes modificar los días y los importes sin cambiar el planteamiento.</p>
+        <div id="lista-focal" class="lista-ejercicios"></div>
+      </section>
+
+      <section id="descuento-simple" class="tarjeta tema-seccion">
+        <div class="encabezado-seccion"><span class="etiqueta">FINANCIAMIENTO</span><h2>Descuento simple</h2><p>En el descuento comercial por anticipado se descuenta una cantidad del valor nominal antes de entregar el dinero al prestatario.</p></div>
+        <div class="formulas una"><div class="formula"><span>Descuento y capital líquido</span><strong>D = F × d × n &nbsp; · &nbsp; P = F − D</strong></div></div>
+        <div id="lista-descuento" class="lista-ejercicios"></div>
+      </section>
+
+      <section id="tasa-equivalente" class="tarjeta tema-seccion">
+        <div class="encabezado-seccion"><span class="etiqueta">COSTO REAL DEL CRÉDITO</span><h2>Tasa equivalente</h2><p>Calculamos la tasa real de interés sobre el dinero efectivamente recibido y comprobamos su relación con una tasa de descuento anticipado.</p></div>
+        <div class="formulas una"><div class="formula"><span>Interés simple equivalente</span><strong>i = (F − P) / (P × n)</strong></div></div>
+        <div id="lista-equivalente" class="lista-ejercicios"></div>
+      </section>
+
+      <section class="tarjeta futuros">
+        <span class="etiqueta">CONTINUACIÓN DEL SEMESTRE</span>
+        <h2>Próximos contenidos</h2>
+        <p>Diagrama de tiempo · Interés compuesto · Anualidades · Amortización · Evaluación de proyectos · TIR. Estos apartados se incorporarán sin rehacer la página.</p>
+      </section>
+      <footer>Universidad Agraria del Ecuador · Ingeniería Económica · Grupo 13</footer>
+    </main>
+  </div>
+</body>
+</html>
